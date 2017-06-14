@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="5000000" />
+	</bean>
+	<!-- <bean id="registeredUserValidator" class="com.myproject.validator.UserValidation"></bean>
+	<bean id="userDao" class="com.myproject.dao.RegisteredUserDAO" ></bean> -->
+	<bean id="userDao" class="com.myproject.dao.RegisteredUserDAO" />
+	<bean id="retailerDao" class="com.myproject.dao.RetailerDAO" />
+	<bean id="requestDao" class="com.myproject.dao.RequestDAO" />
+	<bean id="lotteryDao" class="com.myproject.dao.LotteryDAO" />
+	<bean id="categoryDao" class="com.myproject.dao.CategoryDAO" />
+	<bean id="uDao" class="com.myproject.dao.UserDAO" />
+	<bean id="registeredUserValidator" class="com.myproject.validator.UserValidation" />
+	<bean id="RetailerValidator" class="com.myproject.validator.RetailerValidation" />
+	
+	
+	
+</beans>
